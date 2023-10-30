@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Attrition Prediction</title>
+</head>
+
+<body>
+    <h1>Employee Attrition Prediction</h1>
+    <form method="POST">
+        <label for="BusinessTravel">Business Travel:</label>
+        <input type="text" name="BusinessTravel" required>
+        <br>
+        <!-- <label for="Department">Department:</label>
+       <input type="text" name="Department" required> -->
+        <!-- Add input fields for other attributes here -->
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" required>
+        <br>
+        <label for="DailyRate">Daily Rate:</label>
+        <input type="number" name="DailyRate" required>
+        <br>
+        <label for="MonthlyIncome">Monthly Income:</label>
+        <input type="number" name="MonthlyIncome" required>
+        <br>
+        <label for="YearsAtCompany">Years at Company:</label>
+        <input type="number" name="YearsAtCompany" required>
+        <br>
+        <label for="Gender">Gender:</label>
+        <select name="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br>
+        <input type="submit" value="Predict Attrition">
+    </form>
+    {% if prediction is not none %}
+    <p>Predicted Attrition: {{ prediction }}</p>
+    {% endif %}
+</body>
+
+</html>
